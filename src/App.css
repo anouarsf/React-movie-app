@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
+
+.App{
+  margin: 0px;
+  padding : 0px;
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrQbQ1m958ZASxAlPOMENDg5_3lCYZO5PndHgglaTbb0vDsbsp&s);
+  background-size: cover
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/*-----------------Container Movie/ Liste Movie ------------------------*/
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container-movie{
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  color: rgb(0, 0, 0);
+}
+.card-movie{
+background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  margin: 30px 80px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 3px 3px rgb(241, 153, 37), -1.5em 0 .2em rgb(104, 66, 9);
 }
 
-.App-link {
-  color: #61dafb;
+.card-movie:hover {
+  background-image: url(http://www.toolboxcreative.in/wp-content/uploads/2018/01/1.jpg)
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+.btn-read{
+  border-color: rgb(241, 153, 37);
+background-color: rgb(241, 153, 37);
+text-decoration: none;
+width: 166px;
 }
+.lien-hypertexte{
+  color: rgb(247, 244, 244);
+  font-size: 15px;
+  font-family: 'Poiret One', cursive;
+
+}
+.img-movie{
+  height:236px ;
+  width: 166px;
+}
+
+.title-movie{
+  margin-top:15px;
+  text-align: center;
+  color: #a01c04;
+  font-family: 'Lobster Two', cursive;
+
+}
+/*-------------------Search Movie/input-------------*/
+.input-btn{
+  height: 32px;
+  width: 580px;
+  margin-left: 350px;
+  border: 1px solid  #ff851b;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+.starsearch{
+  margin-left: 594px;
+  margin-top:20px;
+
+}
+/*-----------------Add movie/ Modal------------------------*/
+
+.title-modal{
+  color: rgb(144, 1, 1);
+  font-family: 'Poiret One', cursive;
+  margin-left: 140px;
+
+}
+.plus{
+  height: 30px;
+  width:190px;
+  margin-top: 20px;
+  margin-left: 550px;
+ 
+}
+.plus:hover{
+  -webkit-transform: scale(1);
+	transform: scale(1);
+}
+.input-add-movie{
+  display: flex;
+  padding: 10px;
+  margin-left: 120px;
+  border-radius: 5px;
+  height: 20px;
+}
+.input-add-movie-ratting{
+  margin-left:180px;
+  border-radius: 5px;
+  height: 20px;
+
+
+}
+
+.title-each-input{
+  margin-left: 180px;
+  font-family: 'Share Tech Mono', monospace;
+  color: red;
+font-size:15px;
+}
+
+/* ----------------Search by Ratting/ Ratting------------------------- */
