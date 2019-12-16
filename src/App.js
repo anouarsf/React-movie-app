@@ -25,27 +25,38 @@ state={
   ],
 
   filtermovie:'',
-  rating:undefined
+  rating:undefined ,
+  isloading:true ,
 }
 
 handleadd=(z)=>this.setState({
   liste:[...this.state.liste,z]
 })
 
-
+componentDidMount (){
+  setTimeout(()=>{
+    this.setState({
+      isloading:false
+    })
+  } ,3000)
+}
 
 changeRating=(newRating,title) =>{
   this.setState ({ rating :newRating})
 }
 
   render() {
-    return (
+    return this.state.isloading ? <div class="d-flex justify-content-center">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div> :(
       <div  className="App">
         <Searchmovie rating={this.state.rating} changeRating={this.changeRating}  filtername={(e)=>{this.setState({filtermovie : e})}}  />
         <ModalExample add={this.handleadd}/>  
-        <Listemovie changeRating={this.changeRating}  liste={this.state.liste.filter(el => this.state.rating ?
+        <Listemovie  changeRating={this.changeRating}  liste={this.state.liste.filter(el => this.state.rating ?
             el.title.toLowerCase().includes(this.state.filtermovie) && el.rating >= this.state.rating :
-            el.title.toLowerCase().includes(this.state.filtermovie))}/>
+            el.title.toLowerCase().includes(this.state.filtermovie))} loading={this.state.isloading}/>
 
 
       </div>

@@ -113,3 +113,7 @@ font-size:15px;
 }
 
 /* ----------------Search by Ratting/ Ratting------------------------- */
+
+.sr-only{
+  border:2px solid red;
+}
